@@ -6,7 +6,7 @@ import static org.aeonbits.owner.Config.Sources;
 
 @Config.LoadPolicy(Config.LoadType.MERGE)
 @Sources({"system:properties",
-        "classpath:config/project-${runIn}.properties"})
+        "classpath:config/${runIn}.properties"})
 public interface ProjectConfig extends Config {
     String remoteDriver();
     String baseUrl();

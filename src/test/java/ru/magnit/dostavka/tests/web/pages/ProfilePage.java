@@ -1,7 +1,6 @@
-package ru.dostavka.magnit.web.pages;
+package ru.magnit.dostavka.tests.web.pages;
 
 import com.codeborne.selenide.SelenideElement;
-import com.codeborne.selenide.conditions.Text;
 import io.qameta.allure.Step;
 
 import static com.codeborne.selenide.Condition.text;

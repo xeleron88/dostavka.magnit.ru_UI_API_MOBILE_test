@@ -1,17 +1,15 @@
-package ru.dostavka.magnit.web.pages;
+package ru.magnit.dostavka.tests.web.pages;
 
-import com.codeborne.selenide.Config;
 import com.codeborne.selenide.SelenideElement;
-import config.App;
-import config.Project;
 import io.qameta.allure.Step;
-import ru.dostavka.magnit.domain.HeaderSectionLinks;
+import ru.magnit.dostavka.tests.web.domain.HeaderSectionLinks;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.by;
 import static com.codeborne.selenide.Selectors.withText;
-import static com.codeborne.selenide.Selenide.*;
+import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.webdriver;
 import static com.codeborne.selenide.WebDriverConditions.url;
 
 public class MainPage {

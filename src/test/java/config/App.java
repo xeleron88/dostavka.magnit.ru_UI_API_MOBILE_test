@@ -14,7 +14,6 @@ public class App {
     static {
         validateProperty(config.login(), "login");
         validateProperty(config.password(), "password");
-        validateProperty(config.phpSessId(), "phpSessId");
         logger.info(config.toString());
     }
 
