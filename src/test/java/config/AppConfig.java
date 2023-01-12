@@ -9,5 +9,5 @@ import org.aeonbits.owner.Config;
 public interface AppConfig extends Config {
     String login();
     String password();
-    String phpSessId();
+    String httpSessId();
 }

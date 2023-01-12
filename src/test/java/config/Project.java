@@ -13,6 +13,7 @@ public class Project {
     static {
         if ("API".equals(System.getProperty("tag"))) {
             validateProperty(config.apiBaseUrl(), "apiBaseUrl");
+            validateProperty(App.config.httpSessId(), "httpSessId");
         } else {
             validateEnvDependentProperties();
         }
