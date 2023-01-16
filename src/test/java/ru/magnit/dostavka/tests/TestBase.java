@@ -48,7 +48,7 @@ public class TestBase {
     @AfterEach
     @Step("Save artifacts and close webdriver")
     public void afterEach() {
-        Attachments.screenshotAs("Last screenshot");
+//        Attachments.screenshotAs("Last screenshot");
         Attachments.pageSource();
         attachEnvDependingTestArtifacts();
         closeWebDriver();
