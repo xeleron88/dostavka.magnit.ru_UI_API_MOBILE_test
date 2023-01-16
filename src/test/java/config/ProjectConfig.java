@@ -20,4 +20,5 @@ public interface ProjectConfig extends Config {
     String apiBaseUrl();
     String productId();
     String shopId();
+    String app();
 }

@@ -44,7 +44,7 @@ public class BrowserstackAndroidDriver implements WebDriverProvider {
         mutableCapabilities.setCapability("browserstack.appium_version", "1.22.0");
         mutableCapabilities.setCapability("browserstack.user", config.user());
         mutableCapabilities.setCapability("browserstack.key", config.key());
-        mutableCapabilities.setCapability("app", "bs://ab49b891709f3da44869b3ef0a2768cd7055a188");
+        mutableCapabilities.setCapability("app", config.app());
         mutableCapabilities.setCapability("device", config.deviceName());
         mutableCapabilities.setCapability("os_version", config.platformVersion());
         mutableCapabilities.setCapability("project", "First Java Project");

@@ -15,8 +15,8 @@ import ru.magnit.dostavka.tests.mobile.pages.MainPage;
 import ru.magnit.dostavka.tests.mobile.pages.PrePage;
 
 
-//@Tag("Android")
-//@Epic("Android")
+@Tag("Android")
+@Epic("Android")
 @Feature("MainPage")
 @Owner("xeleron88")
 public class MainPageTests extends TestBase {
