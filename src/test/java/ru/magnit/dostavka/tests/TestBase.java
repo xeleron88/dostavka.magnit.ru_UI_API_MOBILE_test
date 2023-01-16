@@ -8,6 +8,7 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import ru.magnit.dostavka.drivers.LocalAndRemoteWebDriver;
+import ru.magnit.dostavka.drivers.LocalAndroidDriver;
 
 import static com.codeborne.selenide.Selenide.closeWebDriver;
 import static com.codeborne.selenide.Selenide.open;
@@ -34,9 +35,9 @@ public class TestBase {
 //            case "android_browserstack":
 //                Configuration.browser = BrowserstackAndroidDriver.class.getName();
 //                break;
-//            case "android_emulator":
-//                Configuration.browser = LocalAndroidDriver.class.getName();
-//                break;
+            case "android_emulator":
+                Configuration.browser = LocalAndroidDriver.class.getName();
+                break;
         }
     }
 
