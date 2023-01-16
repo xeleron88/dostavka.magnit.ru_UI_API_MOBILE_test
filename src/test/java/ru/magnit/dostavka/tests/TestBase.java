@@ -48,13 +48,12 @@ public class TestBase {
     @AfterEach
     @Step("Save artifacts and close webdriver")
     public void afterEach() {
-//        Attachments.screenshotAs("Last screenshot");
-        Attachments.pageSource();
         attachEnvDependingTestArtifacts();
         closeWebDriver();
     }
 
     private void attachEnvDependingTestArtifacts() {
+        Attachments.pageSource();
         String sessionId = Attachments.getSessionId();
         switch (Project.config.runIn()) {
             case "android_browserstack":
@@ -62,8 +61,14 @@ public class TestBase {
                 Attachments.browserstackFullInfoLink(sessionId);
                 break;
             case "browser_selenoid":
+                Attachments.screenshotAs("Last screenshot");
                 Attachments.videoSelenoid(sessionId);
+                break;
+            case "android_emulator":
+                Attachments.screenshotAs("Last screenshot");
+                break;
             case "browser_local":
+                Attachments.screenshotAs("Last screenshot");
                 if (!Project.config.browser().equals("firefox")) {
                     Attachments.browserConsoleLogs();
                 }
