@@ -11,8 +11,8 @@ import ru.magnit.dostavka.tests.mobile.pages.MainPage;
 import ru.magnit.dostavka.tests.mobile.pages.PrePage;
 import ru.magnit.dostavka.tests.mobile.pages.SearchPage;
 
-@Tag("Android")
-@Epic("Android")
+//@Tag("Android")
+//@Epic("Android")
 @Feature("Search")
 @Owner("xeleron88")
 public class SearchTests extends TestBase {

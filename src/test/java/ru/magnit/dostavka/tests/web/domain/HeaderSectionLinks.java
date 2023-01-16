@@ -5,7 +5,7 @@ import config.Project;
 public enum HeaderSectionLinks {
     VEGETABLES("Овощи и фрукты", Project.config.baseUrl() + "/catalog/ovoshchi_frukty/"),
     MILK("Молоко, сыр, яйца", Project.config.baseUrl() + "/catalog/moloko_syr_yaytsa/"),
-    MEAT("Мясо, птица, колбасы", Project.config.baseUrl() + "/catalog/myaso_ptitsa_kolbasy/"),
+    MEAT("Мясо, птица", Project.config.baseUrl() + "/catalog/myaso_ptitsa_kolbasy/"),
     FOOD("Готовая еда", Project.config.baseUrl() + "/catalog/gotovaya_eda/"),
     DRINKS("Напитки", Project.config.baseUrl() + "/catalog/napitki_soki_voda/"),
     TEA("Чай, кофе, какао", Project.config.baseUrl() + "/catalog/chay_kofe_kakao/"),

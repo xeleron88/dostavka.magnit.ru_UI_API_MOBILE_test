@@ -7,13 +7,14 @@ import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
+import ru.magnit.dostavka.drivers.BrowserstackAndroidDriver;
 import ru.magnit.dostavka.drivers.LocalAndRemoteWebDriver;
 import ru.magnit.dostavka.drivers.LocalAndroidDriver;
+import ru.magnit.dostavka.helpers.Attachments;
 
 import static com.codeborne.selenide.Selenide.closeWebDriver;
 import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.logevents.SelenideLogger.addListener;
-import static ru.magnit.dostavka.helpers.Attachments.*;
 
 public class TestBase {
 
@@ -29,12 +30,9 @@ public class TestBase {
             case "browser_local":
                 LocalAndRemoteWebDriver.configure();
                 break;
-//            case "android_selenoid":
-//                Configuration.browser = SelenoidAndroidDriver.class.getName();
-//                break;
-//            case "android_browserstack":
-//                Configuration.browser = BrowserstackAndroidDriver.class.getName();
-//                break;
+            case "android_browserstack":
+                Configuration.browser = BrowserstackAndroidDriver.class.getName();
+                break;
             case "android_emulator":
                 Configuration.browser = LocalAndroidDriver.class.getName();
                 break;
@@ -50,27 +48,24 @@ public class TestBase {
     @AfterEach
     @Step("Save artifacts and close webdriver")
     public void afterEach() {
-        screenshotAs("Last screenshot");
-        pageSource();
+        Attachments.screenshotAs("Last screenshot");
+        Attachments.pageSource();
         attachEnvDependingTestArtifacts();
         closeWebDriver();
     }
 
     private void attachEnvDependingTestArtifacts() {
-        String sessionId = getSessionId();
+        String sessionId = Attachments.getSessionId();
         switch (Project.config.runIn()) {
-//            case "android_browserstack":
-//                videoBrowserstack(sessionId);
-//                browserstackFullInfoLink(sessionId);
-//                break;
-//            case "android_selenoid":
-//                videoSelenoid(sessionId);
-//                break;
+            case "android_browserstack":
+                Attachments.videoBrowserstack(sessionId);
+                Attachments.browserstackFullInfoLink(sessionId);
+                break;
             case "browser_selenoid":
-                videoSelenoid(sessionId);
+                Attachments.videoSelenoid(sessionId);
             case "browser_local":
                 if (!Project.config.browser().equals("firefox")) {
-                    browserConsoleLogs();
+                    Attachments.browserConsoleLogs();
                 }
                 break;
         }

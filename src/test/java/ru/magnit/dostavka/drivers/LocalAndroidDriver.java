@@ -40,6 +40,6 @@ public class LocalAndroidDriver implements WebDriverProvider {
     }
 
     private File getApk() {
-        return new File("src/test/resources/apk/magnit_dostavka_produktov_v.3.7.2.apk");
+        return new File("src/test/resources/apk/ru.magnit.express.android_3.7.2_1147.apk");
     }
 }

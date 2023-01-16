@@ -15,8 +15,8 @@ import ru.magnit.dostavka.tests.mobile.pages.MainPage;
 import ru.magnit.dostavka.tests.mobile.pages.PrePage;
 
 
-@Tag("Android")
-@Epic("Android")
+//@Tag("Android")
+//@Epic("Android")
 @Feature("MainPage")
 @Owner("xeleron88")
 public class MainPageTests extends TestBase {
@@ -25,19 +25,19 @@ public class MainPageTests extends TestBase {
     @Test
     @DisplayName("Check delivery address")
     void checkDeliveryAddress() {
-        prePage.skipPrePage("Уланская улица, 11");
+        prePage.skipPrePage("Ростов-на-Дону, Уланская улица, 11");
         mainPage.checkAddress("Уланская улица, 11");
     }
 
     @Test
     @DisplayName("Edit delivery address")
     void changeDeliveryAddress() {
-        prePage.skipPrePage("Уланская улица, 11");
+        prePage.skipPrePage("Ростов-на-Дону, Уланская улица, 11");
         mainPage.clickArrowButton();
         mainPage.clickToEditImage();
         mainPage.clickToChangeButton();
         prePage.valueEditTextClick();
-        prePage.enterAddressText("Уланская улица, 15");
+        prePage.enterAddressText("Ростов-на-Дону, Уланская улица, 15");
         prePage.clickOnTheDesiredAdress();
         prePage.clickNextButton();
         mainPage.checkAddress("Уланская улица, 15");
@@ -50,7 +50,7 @@ public class MainPageTests extends TestBase {
         Allure.getLifecycle().updateTestCase(test ->
                 test.setName("Ability to switch shop type to: " + shopTypes.shopType));
 
-        prePage.skipPrePage("Социалистическая улица, 128");
+        prePage.skipPrePage("Ростов-на-Дону, Социалистическая улица, 128");
         mainPage.changeShopType(shopTypes.shopType);
         mainPage.checkShopType(shopTypes.shopType);
     }

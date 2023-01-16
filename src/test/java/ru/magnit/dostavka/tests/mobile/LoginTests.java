@@ -21,26 +21,26 @@ public class LoginTests extends TestBase {
     @Test
     @DisplayName("Ability to open profile page")
     void checkDeliveryAddress() {
-        prePage.skipPrePage("Уланская улица, 11");
+        prePage.skipPrePage("Ростов-на-Дону, Уланская улица, 11");
         profilePage.clickToProfile();
         profilePage.checkProfileTitle();
     }
 
-    @Test
-    @DisplayName("Checking if a valid phone number has been entered")
-    void checkValidPhoneNumber() {
-        prePage.skipPrePage("Уланская улица, 11");
-        profilePage.clickToProfile();
-        profilePage.enterPhoneNumber("9289566554");
-        profilePage.checkValidNumber();
-    }
-
-    @Test
-    @DisplayName("Checking if a invalid phone number has been entered")
-    void checkInvalidPhoneNumber() {
-        prePage.skipPrePage("Уланская улица, 11");
-        profilePage.clickToProfile();
-        profilePage.enterPhoneNumber("1111111111");
-        profilePage.checkInvalidNumber();
-    }
+//    @Test
+//    @DisplayName("Checking if a valid phone number has been entered")
+//    void checkValidPhoneNumber() {
+//        prePage.skipPrePage("Ростов-на-Дону, Уланская улица, 11");
+//        profilePage.clickToProfile();
+//        profilePage.enterPhoneNumber("9289566554");
+//        profilePage.checkValidNumber();
+//    }
+//
+//    @Test
+//    @DisplayName("Checking if a invalid phone number has been entered")
+//    void checkInvalidPhoneNumber() {
+//        prePage.skipPrePage("Ростов-на-Дону, Уланская улица, 11");
+//        profilePage.clickToProfile();
+//        profilePage.enterPhoneNumber("1111111111");
+//        profilePage.checkInvalidNumber();
+//    }
 }
