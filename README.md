@@ -5,13 +5,13 @@
 + [Описание](#Описание)
 + [Технологии и инструменты](#Технологии-и-инструменты)
 + [Варианты запуска](#Варианты-запуска)
-    + [Gradle command](#GradleCommand)
-    + [Запуск в Jenkins](#RunInJenkins)
-+ [Telegram уведомления](#TelegramNotifications)
-+ [Результаты тестов в Allure Report](#AllureReport)
-+ [Интеграция с Allure TestOps](#AllureTestOps)
-+ [Интеграция с Jira](#Jira)
-+ [Видео запуска тестов](#Video)
+    + [Команды для gradle](#команды-для-gradle)
+    + [Запуск в Jenkins](#запуск-в-jenkins)
++ [Telegram уведомления](#Telegram-уведомления)
++ [Результаты тестов в Allure Report](#Результаты-тестов-в-Allure-Report)
++ [Интеграция с Allure TestOps](#Интеграция-с-Allure-TestOps)
++ [Интеграция с Jira](#Интеграция-с-Jira)
++ [Видео запуска тестов](#Видео-запуска-тестов)
 
 
 # <a name="Описание">Описание</a>
@@ -105,5 +105,66 @@ C --> F[browser_local]
 D --> G[android_browserstack]
 D --> H[android_emulator]
 ```
+
+[Вернуться к оглавлению ⬆](#Содержание)
+
+## <a name="Запуск в Jenkins">Запуск в [Jenkins](https://jenkins.autotests.cloud/job/dostavka.magnit.ru/)</a>
+Главная страница сборки:
+<p  align="center">
+<img src="images/screens/JenkinsMain.png" width="950">
+</p>
+
+Параметризованное задание Jenkins может быть запущено с необходимыми ***tag*** и ***runIn***:
+<p  align="center">
+<img src="images/screens/Jenkins.png" alt="JenkinsBuildParameters" width="950">
+</p>
+
+Конфиденциальная информация (имена для входа и пароли) хранится в зашифрованном виде в хранилище учетных данных Jenkins.\
+И относительно безопасно передается в сборку аргументами gradle, а его значения маскируются в логах.
+
+После завершения сборки результаты тестирования доступны в:
+>- <code><strong>*Allure Report*</strong></code>
+>- <code><strong>*Allure TestOps*</strong></code> - результаты загружаются туда и тест-кейсы могут автоматически обновляться в соответствии с последними изменениями в коде.
+
+[Вернуться к оглавлению ⬆](#Содержание)
+
+# <a>Telegram уведомления</a>
+Telegram-бот отправляет краткий отчет в указанный телеграм-чат по результатам каждой сборки.
+<p  align="center">
+<img src="images/screens/Telegram.png" width="550">
+</p>
+
+[Вернуться к оглавлению ⬆](#Содержание)
+
+# <a name="AllureReport">Результаты тестов в [Allure Report](https://jenkins.autotests.cloud/job/dostavka.magnit.ru/19/allure/)</a>
+
+## Главная страница
+Главная страница отчета Allure содержит следующие блоки:
+
+>- <code><strong>*ALLURE REPORT*</strong></code> - отображает дату и время теста, общее количество запущенных тестов, а также диаграмму с процентом и количеством успешных, упавших и сломавшихся в процессе выполнения тестов
+>- <code><strong>*TREND*</strong></code> - отображает тенденцию выполнения тестов для всех запусков
+>- <code><strong>*SUITES*</strong></code> - отображает распределение тестов по сьютам
+>- <code><strong>*CATEGORIES*</strong></code> - отображает распределение неудачных тестов по типам дефектов
+<p align="center">
+  <img src="images/screens//AllureReport.png" width="950">
+</p>
+
+## Список тестов с шагами и тестовыми артефактами
+На странице список тестов, сгруппированных по наборам, с указанием статуса для каждого теста.\
+Может быть показана полная информация о каждом тесте: теги, продолжительность, подробные шаги.
+
+<p align="center">
+  <img src="images/screens/AllureTestSuites.png" alt="AllureReportSuites" width="1150">
+</p>
+
+Также доступны дополнительные тестовые артефакты:
+>- Screenshot
+>- Page Source
+>- Video
+>- Browserstack full info link
+
+<p align="left">
+  <img src="images/screens/AllureTestSuites2.png" alt="AllureReportSuites2" width="950">
+</p>
 
 [Вернуться к оглавлению ⬆](#Содержание)
