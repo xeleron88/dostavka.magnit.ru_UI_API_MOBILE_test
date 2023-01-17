@@ -1,7 +1,7 @@
 <h2 align="center"> Проект по автоматизации тестирования для компании "Магнит Доставка" </h2>
 <a href="https://rabota.sber.ru"><img src="./images/icons/logo.svg"></a>
 
-# <a name="TableOfContents">Table of contents</a>
+# <a name="TableOfContents">Содержание</a>
 + [Описание](#Описание)
 + [Технологии и инструменты](#Технологии-и-инструменты)
 + [Варианты запуска](#Jenkins)
