@@ -39,6 +39,7 @@ public class BrowserstackAndroidDriver implements WebDriverProvider {
     @Nonnull
     public WebDriver createDriver(@Nonnull Capabilities capabilities) {
         Configuration.browserSize = null;
+        Configuration.timeout = 30000;
         MutableCapabilities mutableCapabilities = new MutableCapabilities();
         mutableCapabilities.merge(capabilities);
         mutableCapabilities.setCapability("browserstack.appium_version", "1.22.0");
