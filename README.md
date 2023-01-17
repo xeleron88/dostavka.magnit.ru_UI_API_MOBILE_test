@@ -61,3 +61,51 @@
 `Allure Report` - для визуализации результатов тестирования.\
 `Telegram Bot` - для уведомлений о результатах тестирования.\
 `Allure TestOps` - как система управления тестированием.
+
+[Вернуться к оглавлению ⬆](#TableOfContents)
+
+# <a name="HowToRun">How to run</a>
+
+## <a name="GradleCommand">Gradle command</a>
+To run locally and in Jenkins the following command is used:
+```bash
+gradle clean test -Dtag=<tag> -DrunIn=<runIn>
+```
+Additional parameters:
+> `-Dselenoid_user_sys_prop=enter_user` `-Dselenoid_key_sys_prop=enter_key` - credentials for selenoid\
+> `-Dbrowserstack_user_sys_prop=enter_user` `-Dbrowserstack_key_sys_prop=enter_key` - credentials for browserstack\
+> `-Dthreads=number_of_threads` can be added for parallel tests execution\
+> `-DapiBaseUrl=url` can be added to set a base url for API tests
+
+`tag` - tests with this tag will be executed:
+>- *API*
+>- *Web*
+>- *Android*
+ 
+`runIn` - defines an environment for running these tests:
+>- *\<not defined\>(for API tests)*
+>- *browser_selenoid*
+>- *browser_local*
+>- *android_browserstack*
+>- *android_emulator*
+>- *android_real*
+>- *android_selenoid*
+
+Additional properties are retrieved from the corresponding properties file(depending on `runIn` value):
+```bash
+./resources/config/project-${runIn}.properties
+```
+
+Valid combinations:
+```mermaid
+graph LR
+A[tag] --> B[API]
+A --> C[Web]
+A --> D[Android]
+C --> E[browser_selenoid]
+C --> F[browser_local]
+D --> G[android_browserstack]
+D --> H[android_emulator]
+```
+
+[Вернуться к оглавлению ⬆](#TableOfContents)
