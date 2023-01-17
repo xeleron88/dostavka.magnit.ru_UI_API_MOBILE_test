@@ -3,7 +3,7 @@
 
 # <a name="TableOfContents">Table of contents</a>
 + [Описание](#Описание)
-+ [Технологии и инструменты](#Технологии и инструменты)
++ [Технологии и инструменты](#Технологии-и-инструменты)
 + [Варианты запуска](#Jenkins)
     + [Gradle command](#GradleCommand)
     + [Запуск в Jenkins](#RunInJenkins)
