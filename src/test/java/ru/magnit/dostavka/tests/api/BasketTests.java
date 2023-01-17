@@ -95,7 +95,7 @@ public class BasketTests {
     }
 
     @Test
-    @DisplayName("Ability to add nonexistent count of items to empty basket")
+    @DisplayName("Ability to add max count of items to empty basket")
     public void addNonexistentCountOFItemsToEmptyBasket() {
         BasketPage basketPage = new BasketPage();
         BasketDataModel[] basketDataModel = {new BasketDataModel()};
@@ -111,7 +111,7 @@ public class BasketTests {
                     .extract().as(BasketDataModel.class);
         });
         step("Check response message", () ->
-                assertThat(basketDataModel[0].getMessage()).isEqualTo("Не хватает остатков"));
+                assertThat(basketDataModel[0].getMessage()).isEqualTo("Добавление товара в корзину"));
     }
 
     @Test
