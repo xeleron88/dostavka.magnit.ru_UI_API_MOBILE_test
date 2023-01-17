@@ -169,19 +169,17 @@ Telegram-бот отправляет краткий отчет в указанн
 
 [Вернуться к оглавлению ⬆](#Содержание)
 
-# <a>Интеграция с[Allure TestOps](https://allure.autotests.cloud/project/1668/test-cases?treeId=3201)</a>
+# <a>Интеграция с [Allure TestOps](https://allure.autotests.cloud/project/1668/test-cases?treeId=3201)</a>
 > Ссылка доступна только авторизованным пользователям.
 
 Тест-кейсы в проекте импортируются и постоянно обновляются из кода,
 поэтому нет необходимости в синхронизации ручных тест-кейсов и автотестов.\
 Достаточно создать и обновить автотест в коде и тест-кейс всегда будет в актуальном состоянии.
+
 ## Allure TestOps Dashboard
+
 <p align="center">
   <img src="images/screens/AllureTestOpsDashboard.png" alt="AllureTestOpsTests" width="950">
-</p>
-## Allure TestOps Test Cases
-<p align="center">
-  <img src="images/screens/AllureTestOpsTesCases.png" alt="AllureTestOpsTests" width="950">
 </p>
 
 ```mermaid
@@ -198,4 +196,21 @@ C --> D
 D --> E
 E --> A
 ```
+
+## Allure TestOps Test Cases
+
+<p align="center">
+  <img src="images/screens/AllureTestOpsTesCases.png" alt="AllureTestOpsTests" width="950">
+</p>
+
+[Вернуться к оглавлению ⬆](#Содержание)
+
+# <a>Интеграция с Jira</a>
+<p align="center">
+  <img src="images/screens/Jira.png" alt="JiraIntegration" width="950">
+</p>
+
+[Вернуться к оглавлению ⬆](#Содержание)
+
+# <a>Видео запуска тестов</a>
 
