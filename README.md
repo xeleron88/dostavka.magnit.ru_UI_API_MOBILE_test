@@ -5,13 +5,13 @@
 + [Описание](#Описание)
 + [Технологии и инструменты](#Технологии-и-инструменты)
 + [Варианты запуска](#Варианты-запуска)
-    + [Gradle command](#GradleCommand)
-    + [Запуск в Jenkins](#RunInJenkins)
-+ [Telegram уведомления](#TelegramNotifications)
-+ [Результаты тестов в Allure Report](#AllureReport)
-+ [Интеграция с Allure TestOps](#AllureTestOps)
-+ [Интеграция с Jira](#Jira)
-+ [Видео запуска тестов](#Video)
+    + [Команды для gradle](#команды-для-gradle)
+    + [Запуск в Jenkins](#запуск-в-jenkins)
++ [Telegram уведомления](#Telegram0уведомления)
++ [Результаты тестов в Allure Report](#Результаты-тестов-в-Allure-Report)
++ [Интеграция с Allure TestOps](#Интеграция-с-Allure-TestOps)
++ [Интеграция с Jira](#Интеграция-с-Jira)
++ [Видео запуска тестов](#Видео-запуска-тестов)
 
 
 # <a name="Описание">Описание</a>
@@ -116,7 +116,7 @@ D --> H[android_emulator]
 
 Параметризованное задание Jenkins может быть запущено с необходимыми ***tag*** and ***runIn***:
 <p  align="center">
-<img src="images/screens/JenkinsMain.png" alt="JenkinsBuildParameters" width="950">
+<img src="images/screens/Jenkins.png" alt="JenkinsBuildParameters" width="950">
 </p>
 
 Конфиденциальная информация (имена для входа и пароли) хранится в зашифрованном виде в хранилище учетных данных Jenkins.\
@@ -125,9 +125,5 @@ D --> H[android_emulator]
 После завершения сборки результаты тестирования доступны в:
 >- <code><strong>*Allure Report*</strong></code>
 >- <code><strong>*Allure TestOps*</strong></code> - результаты загружаются туда и тест-кейсы могут автоматически обновляться в соответствии с последними изменениями в коде.
-
-<p  align="center">
-<img src="images/screens/JenkinsFinishedBuild.png" alt="JenkinsFinishedBuild" width="950">
-</p>
 
 [Вернуться к оглавлению ⬆](#Содержание)
