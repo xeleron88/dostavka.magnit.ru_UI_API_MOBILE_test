@@ -1,5 +1,7 @@
-<h2 align="center"> Проект по автоматизации тестирования для компании "Магнит Доставка" </h2>
-<a href="https://rabota.sber.ru"><img src="./images/icons/logo.svg"></a>
+<h2 align="center"> Проект по автоматизации тестирования для компании "Магнит Доставка"</h2>
+<p  align="center">
+<a href="https://dostavka.magnit.ru"><img src="./images/icons/logo.svg" width="950"></a>
+</p>
 
 # <a name="Содержание">Содержание</a>
 + [Описание](#Описание)
