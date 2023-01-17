@@ -1,10 +1,10 @@
 <h2 align="center"> Проект по автоматизации тестирования для компании "Магнит Доставка" </h2>
 <a href="https://rabota.sber.ru"><img src="./images/icons/logo.svg"></a>
 
-# <a name="TableOfContents">Содержание</a>
+# <a name="Содержание">Содержание</a>
 + [Описание](#Описание)
 + [Технологии и инструменты](#Технологии-и-инструменты)
-+ [Варианты запуска](#Jenkins)
++ [Варианты запуска](#Варианты-запуска)
     + [Gradle command](#GradleCommand)
     + [Запуск в Jenkins](#RunInJenkins)
 + [Telegram уведомления](#TelegramNotifications)
@@ -62,41 +62,38 @@
 `Telegram Bot` - для уведомлений о результатах тестирования.\
 `Allure TestOps` - как система управления тестированием.
 
-[Вернуться к оглавлению ⬆](#TableOfContents)
+[Вернуться к оглавлению ⬆](#Содержание)
 
-# <a name="HowToRun">How to run</a>
+# <a name="Варианты запуска">Варианты запуска</a>
 
-## <a name="GradleCommand">Gradle command</a>
-To run locally and in Jenkins the following command is used:
+## <a name="GradleCommand">Команды для Gradle</a>
+Для запуска локально и в Jenkins используется следующая команда::
 ```bash
 gradle clean test -Dtag=<tag> -DrunIn=<runIn>
 ```
-Additional parameters:
-> `-Dselenoid_user_sys_prop=enter_user` `-Dselenoid_key_sys_prop=enter_key` - credentials for selenoid\
-> `-Dbrowserstack_user_sys_prop=enter_user` `-Dbrowserstack_key_sys_prop=enter_key` - credentials for browserstack\
-> `-Dthreads=number_of_threads` can be added for parallel tests execution\
-> `-DapiBaseUrl=url` can be added to set a base url for API tests
+Дополнительные параметры:
+> `-Dselenoid_user_sys_prop=enter_user` `-Dselenoid_key_sys_prop=enter_key` - данные для selenoid\
+> `-Dbrowserstack_user_sys_prop=enter_user` `-Dbrowserstack_key_sys_prop=enter_key` - данные для browserstack\
+> `-DapiBaseUrl=url` можно добавить для установки базового URL-адреса для тестов API.
 
-`tag` - tests with this tag will be executed:
+`tag` - теги для запуска выполнения тестов:
 >- *API*
 >- *Web*
 >- *Android*
  
-`runIn` - defines an environment for running these tests:
->- *\<not defined\>(for API tests)*
+`runIn` - определяет среду для запуска этих тестов:
+>- *api* - for api tests
 >- *browser_selenoid*
 >- *browser_local*
 >- *android_browserstack*
 >- *android_emulator*
->- *android_real*
->- *android_selenoid*
 
-Additional properties are retrieved from the corresponding properties file(depending on `runIn` value):
+Дополнительные свойства извлекаются из соответствующего файла конфигурации (в зависимости от значения `runIn`):
 ```bash
-./resources/config/project-${runIn}.properties
+./resources/config/${runIn}.properties
 ```
 
-Valid combinations:
+Допустимые комбинации:
 ```mermaid
 graph LR
 A[tag] --> B[API]
@@ -108,4 +105,4 @@ D --> G[android_browserstack]
 D --> H[android_emulator]
 ```
 
-[Вернуться к оглавлению ⬆](#TableOfContents)
+[Вернуться к оглавлению ⬆](#Содержание)
