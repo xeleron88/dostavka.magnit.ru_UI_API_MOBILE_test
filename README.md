@@ -214,4 +214,6 @@ E --> A
 
 # <a>Видео запуска тестов</a>
 
-https://github.com/xeleron88/dostavka.magnit.ru_UI_API_MOBILE_test/raw/master/images/video.mp4
+<p align="center">
+  <img src="images/screens/video.gif" alt="JiraIntegration">
+</p>
