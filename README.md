@@ -107,3 +107,27 @@ D --> H[android_emulator]
 ```
 
 [Вернуться к оглавлению ⬆](#Содержание)
+
+## <a name="RunInJenkins">Запуск в [Jenkins](https://jenkins.autotests.cloud/job/dostavka.magnit.ru/)</a>
+Главная страница сборки:
+<p  align="center">
+<img src="images/screens/JenkinsMain.png" width="950">
+</p>
+
+Параметризованное задание Jenkins может быть запущено с необходимыми ***tag*** and ***runIn***:
+<p  align="center">
+<img src="images/screens/JenkinsMain.png" alt="JenkinsBuildParameters" width="950">
+</p>
+
+Конфиденциальная информация (имена для входа и пароли) хранится в зашифрованном виде в хранилище учетных данных Jenkins.\
+И относительно безопасно передается в сборку аргументами gradle, а его значения маскируются в логах.
+
+После завершения сборки результаты тестирования доступны в:
+>- <code><strong>*Allure Report*</strong></code>
+>- <code><strong>*Allure TestOps*</strong></code> - результаты загружаются туда и тест-кейсы могут автоматически обновляться в соответствии с последними изменениями в коде.
+
+<p  align="center">
+<img src="images/screens/JenkinsFinishedBuild.png" alt="JenkinsFinishedBuild" width="950">
+</p>
+
+[Вернуться к оглавлению ⬆](#Содержание)
