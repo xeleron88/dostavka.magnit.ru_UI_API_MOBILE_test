@@ -2,11 +2,11 @@
 <a href="https://rabota.sber.ru"><img src="./images/icons/logo.svg"></a>
 
 # <a name="TableOfContents">Table of contents</a>
-+ [Описание](#Description)
-+ [Технологии и инструменты](#Technology)
++ [Описание](#Описание)
++ [Технологии и инструменты](#Технологии и инструменты)
 + [Варианты запуска](#Jenkins)
     + [Gradle command](#GradleCommand)
-    + [Run in Jenkins](#RunInJenkins)
+    + [Запуск в Jenkins](#RunInJenkins)
 + [Telegram уведомления](#TelegramNotifications)
 + [Результаты тестов в Allure Report](#AllureReport)
 + [Интеграция с Allure TestOps](#AllureTestOps)
@@ -14,7 +14,7 @@
 + [Видео запуска тестов](#Video)
 
 
-# <a name="Description">Описание</a>
+# <a name="Описание">Описание</a>
 Тестовый проект состоит из веб-тестов (UI), тестов API и мобильных тестов (Android).\
 Краткий список интересных фактов о проекте:
 - [x] `Page Object` проектирование
@@ -30,7 +30,7 @@
 - [x] Интеграция с `Jira`
 
 
-# <a name="Technology">Технологии и инструменты</a>
+# <a name="Технологии и инструменты">Технологии и инструменты</a>
 <p  align="center">
   <code><img width="5%" title="IntelliJ IDEA" src="./images/icons/IDEA-logo.svg"></code>
   <code><img width="5%" title="Java" src="./images/icons/java-logo.svg"></code>
