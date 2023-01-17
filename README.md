@@ -21,7 +21,7 @@
 - [x] Параметризованные тесты
 - [x] Различные файлы конфигурации для запуска теста в зависимости от параметров сборки
 - [x] Конфигурация с библиотекой `Owner`
-- [x] Использование `Lombok` для моделей API
+- [x] Использование `Lombok` для моделей в API тестах
 - [x] Objects serialization/deserialization for API requests/responses using `Jackson`
 - [x] Использование request/response спецификаций для API тестов
 - [x] Custom Allure listener для API requests/responses логов
