@@ -154,7 +154,7 @@ Telegram-бот отправляет краткий отчет в указанн
 Может быть показана полная информация о каждом тесте: теги, продолжительность, подробные шаги.
 
 <p align="center">
-  <img src="images/screens/AllureTestSuites.png" alt="AllureReportSuites" width="1150">
+  <img src="images/screens/AllureTestSuites.png" alt="AllureReportSuites" width="750">
 </p>
 
 Также доступны дополнительные тестовые артефакты:
@@ -168,3 +168,34 @@ Telegram-бот отправляет краткий отчет в указанн
 </p>
 
 [Вернуться к оглавлению ⬆](#Содержание)
+
+# <a>Интеграция с[Allure TestOps](https://allure.autotests.cloud/project/1668/test-cases?treeId=3201)</a>
+> Ссылка доступна только авторизованным пользователям.
+
+Тест-кейсы в проекте импортируются и постоянно обновляются из кода,
+поэтому нет необходимости в синхронизации ручных тест-кейсов и автотестов.\
+Достаточно создать и обновить автотест в коде и тест-кейс всегда будет в актуальном состоянии.
+## Allure TestOps Dashboard
+<p align="center">
+  <img src="images/screens/AllureTestOpsDashboard.png" alt="AllureTestOpsTests" width="950">
+</p>
+## Allure TestOps Test Cases
+<p align="center">
+  <img src="images/screens/AllureTestOpsTesCases.png" alt="AllureTestOpsTests" width="950">
+</p>
+
+```mermaid
+stateDiagram-v2
+state "Тест создан/обновлен в коде" as A
+state "Запускается сборка в Jenkins" as B
+state "Сборка в Jenkins завершена" as C
+state "Запуск Allure TestOps, связанный со сборкой, отмеченной как закрытая" as D
+state "Все выполненные тест-кейсы автоматически создаются/обновляются в соответствии с кодом" as E
+[*] --> A
+A --> B
+B --> C
+C --> D
+D --> E
+E --> A
+```
+
