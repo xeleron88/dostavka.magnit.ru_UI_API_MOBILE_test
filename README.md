@@ -217,3 +217,5 @@ E --> A
 <p align="center">
   <img src="images/screens/video.gif" alt="JiraIntegration">
 </p>
+
+[Вернуться к оглавлению ⬆](#Содержание)
