@@ -97,6 +97,7 @@ gradle clean test -Dtag=<tag> -DrunIn=<runIn>
 ```mermaid
 graph LR
 A[tag] --> B[API]
+B --> E[api]
 A --> C[Web]
 A --> D[Android]
 C --> E[browser_selenoid]
