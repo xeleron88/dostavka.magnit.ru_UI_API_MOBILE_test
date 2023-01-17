@@ -7,7 +7,7 @@
 + [Варианты запуска](#Варианты-запуска)
     + [Команды для gradle](#команды-для-gradle)
     + [Запуск в Jenkins](#запуск-в-jenkins)
-+ [Telegram уведомления](#Telegram0уведомления)
++ [Telegram уведомления](#Telegram-уведомления)
 + [Результаты тестов в Allure Report](#Результаты-тестов-в-Allure-Report)
 + [Интеграция с Allure TestOps](#Интеграция-с-Allure-TestOps)
 + [Интеграция с Jira](#Интеграция-с-Jira)
@@ -108,7 +108,7 @@ D --> H[android_emulator]
 
 [Вернуться к оглавлению ⬆](#Содержание)
 
-## <a name="RunInJenkins">Запуск в [Jenkins](https://jenkins.autotests.cloud/job/dostavka.magnit.ru/)</a>
+## <a name="Запуск в Jenkins">Запуск в [Jenkins](https://jenkins.autotests.cloud/job/dostavka.magnit.ru/)</a>
 Главная страница сборки:
 <p  align="center">
 <img src="images/screens/JenkinsMain.png" width="950">
@@ -125,5 +125,13 @@ D --> H[android_emulator]
 После завершения сборки результаты тестирования доступны в:
 >- <code><strong>*Allure Report*</strong></code>
 >- <code><strong>*Allure TestOps*</strong></code> - результаты загружаются туда и тест-кейсы могут автоматически обновляться в соответствии с последними изменениями в коде.
+
+[Вернуться к оглавлению ⬆](#Содержание)
+
+# <a>Telegram уведомления</a>
+Telegram-бот отправляет краткий отчет в указанный телеграм-чат по результатам каждой сборки.
+<p  align="center">
+<img src="images/screens/Telegram.png" width="550">
+</p>
 
 [Вернуться к оглавлению ⬆](#Содержание)
