@@ -27,7 +27,7 @@
 - [x] Использование request/response спецификаций для API тестов
 - [x] Custom Allure listener для API requests/responses логов
 - [x] Интеграция с `Allure TestOps`
-- [x] Autotests as test documentation
+- [x] Автотесты как тестовая документация
 - [x] Интеграция с `Jira`
 
 
