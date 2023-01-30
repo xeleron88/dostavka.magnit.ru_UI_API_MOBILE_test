@@ -1,5 +1,7 @@
-<h2 align="center"> Проект по автоматизации тестирования для компании "Магнит Доставка" </h2>
-<a href="https://rabota.sber.ru"><img src="./images/icons/logo.svg"></a>
+<h2 align="center"> Проект по автоматизации тестирования для компании "Магнит Доставка"</h2>
+<p  align="center">
+<a href="https://dostavka.magnit.ru"><img src="./images/icons/logo.svg" width="950"></a>
+</p>
 
 # <a name="Содержание">Содержание</a>
 + [Описание](#Описание)
@@ -22,11 +24,10 @@
 - [x] Различные файлы конфигурации для запуска теста в зависимости от параметров сборки
 - [x] Конфигурация с библиотекой `Owner`
 - [x] Использование `Lombok` для моделей в API тестах
-- [x] Objects serialization/deserialization for API requests/responses using `Jackson`
 - [x] Использование request/response спецификаций для API тестов
 - [x] Custom Allure listener для API requests/responses логов
 - [x] Интеграция с `Allure TestOps`
-- [x] Autotests as test documentation
+- [x] Автотесты как тестовая документация
 - [x] Интеграция с `Jira`
 
 
@@ -214,4 +215,8 @@ E --> A
 
 # <a>Видео запуска тестов</a>
 
-https://github.com/xeleron88/dostavka.magnit.ru_UI_API_MOBILE_test/raw/master/images/video.mp4
+<p align="center">
+  <img src="images/screens/video.gif" alt="JiraIntegration">
+</p>
+
+[Вернуться к оглавлению ⬆](#Содержание)
