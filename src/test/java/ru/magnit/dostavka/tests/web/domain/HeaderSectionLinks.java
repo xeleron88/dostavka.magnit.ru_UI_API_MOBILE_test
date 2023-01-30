@@ -1,21 +1,29 @@
 package ru.magnit.dostavka.tests.web.domain;
 
 import config.Project;
+import lombok.AllArgsConstructor;
 
+@AllArgsConstructor
 public enum HeaderSectionLinks {
-    VEGETABLES("Овощи и фрукты", Project.config.baseUrl() + "/catalog/ovoshchi_frukty/"),
-    MILK("Молоко, сыр, яйца", Project.config.baseUrl() + "/catalog/moloko_syr_yaytsa/"),
-    MEAT("Мясо, птица", Project.config.baseUrl() + "/catalog/myaso_ptitsa_kolbasy/"),
-    FOOD("Готовая еда", Project.config.baseUrl() + "/catalog/gotovaya_eda/"),
-    DRINKS("Напитки", Project.config.baseUrl() + "/catalog/napitki_soki_voda/"),
-    TEA("Чай, кофе, какао", Project.config.baseUrl() + "/catalog/chay_kofe_kakao/"),
-    BREAD("Хлеб, выпечка", Project.config.baseUrl() + "/catalog/khleb_vypechka_sneki/");
+    VEGETABLES("Овощи и фрукты", "ovoshchi_frukty/"),
+    MILK("Молоко, сыр, яйца", "moloko_syr_yaytsa/"),
+    MEAT("Мясо, птица", "myaso_ptitsa_kolbasy/"),
+    FOOD("Готовая еда", "gotovaya_eda/"),
+    DRINKS("Напитки", "napitki_soki_voda/"),
+    TEA("Чай, кофе, какао", "chay_kofe_kakao/"),
+    BREAD("Хлеб, выпечка", "khleb_vypechka_sneki/");
 
-    public final String name;
-    public final String url;
+    private final String name;
+    private final String categoryUrl;
 
-    HeaderSectionLinks(String name, String url) {
-        this.name = name;
-        this.url = url;
+    public String getUrl() {
+        return Project.config.baseUrl() + "/catalog/" + categoryUrl;
     }
+
+    @Override
+    public String toString() {
+        return name;
+    }
+
+
 }

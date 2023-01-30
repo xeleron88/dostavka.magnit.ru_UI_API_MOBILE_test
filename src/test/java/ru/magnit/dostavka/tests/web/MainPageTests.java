@@ -32,10 +32,10 @@ public class MainPageTests extends WebTestBase {
     @DisplayName("Ability to switch to each bottom header section links:")
     void checkHeaderTabsOpening(HeaderSectionLinks headerSectionLinks) {
         Allure.getLifecycle().updateTestCase(test ->
-                test.setName("Ability to switch to each bottom header section links: " + headerSectionLinks.name));
+                test.setName("Ability to switch to each bottom header section links: " + headerSectionLinks.toString()));
 
         mainPage.openHeaderCatItem(headerSectionLinks)
-                .checkPageIsOpen(headerSectionLinks.url);
+                .checkPageIsOpen(headerSectionLinks.getUrl());
     }
 
     @Test

@@ -37,7 +37,7 @@ public class MainPage {
 
     @Step("Open header bottom section link: {headerSectionLinks.name}")
     public MainPage openHeaderCatItem(HeaderSectionLinks headerSectionLinks) {
-        headerSectionLink.$(withText(headerSectionLinks.name)).click();
+        headerSectionLink.$(withText(headerSectionLinks.toString())).click();
         return this;
     }
 
