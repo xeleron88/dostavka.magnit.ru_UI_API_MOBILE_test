@@ -9,19 +9,15 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.EnumSource;
-import ru.magnit.dostavka.tests.TestBase;
 import ru.magnit.dostavka.tests.mobile.domain.ShopTypes;
-import ru.magnit.dostavka.tests.mobile.pages.MainPage;
-import ru.magnit.dostavka.tests.mobile.pages.PrePage;
 
 
 @Tag("Android")
 @Epic("Android")
 @Feature("MainPage")
 @Owner("xeleron88")
-public class MainPageTests extends TestBase {
-    PrePage prePage = new PrePage();
-    MainPage mainPage = new MainPage();
+public class MainPageTests extends MobileTestBase {
+
     @Test
     @DisplayName("Check delivery address")
     void checkDeliveryAddress() {

@@ -11,7 +11,6 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.EnumSource;
 import ru.magnit.dostavka.tests.web.domain.HeaderSectionLinks;
-import ru.magnit.dostavka.tests.web.pages.WebTestBase;
 
 @Tag("Web")
 @Epic("Web")

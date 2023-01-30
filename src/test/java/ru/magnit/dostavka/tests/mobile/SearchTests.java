@@ -15,10 +15,7 @@ import ru.magnit.dostavka.tests.mobile.pages.SearchPage;
 @Epic("Android")
 @Feature("Search")
 @Owner("xeleron88")
-public class SearchTests extends TestBase {
-    PrePage prePage = new PrePage();
-    MainPage mainPage = new MainPage();
-    SearchPage searchPage = new SearchPage();
+public class SearchTests extends MobileTestBase {
 
     @Test
     @DisplayName("Ability to search for products")

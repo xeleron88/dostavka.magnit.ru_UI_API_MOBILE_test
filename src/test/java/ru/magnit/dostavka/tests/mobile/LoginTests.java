@@ -6,17 +6,12 @@ import io.qameta.allure.Owner;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
-import ru.magnit.dostavka.tests.TestBase;
-import ru.magnit.dostavka.tests.mobile.pages.PrePage;
-import ru.magnit.dostavka.tests.mobile.pages.ProfilePage;
 
 @Tag("Android")
 @Epic("Android")
 @Feature("Login")
 @Owner("xeleron88")
-public class LoginTests extends TestBase {
-    PrePage prePage = new PrePage();
-    ProfilePage profilePage = new ProfilePage();
+public class LoginTests extends MobileTestBase {
 
     @Test
     @DisplayName("Ability to open profile page")

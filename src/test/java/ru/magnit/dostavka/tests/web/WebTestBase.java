@@ -1,8 +1,10 @@
-package ru.magnit.dostavka.tests.web.pages;
+package ru.magnit.dostavka.tests.web;
 
 import io.qameta.allure.Step;
 import org.junit.jupiter.api.BeforeEach;
 import ru.magnit.dostavka.tests.TestBase;
+import ru.magnit.dostavka.tests.web.pages.MainPage;
+import ru.magnit.dostavka.tests.web.pages.ProfilePage;
 
 import static com.codeborne.selenide.Selenide.open;
 

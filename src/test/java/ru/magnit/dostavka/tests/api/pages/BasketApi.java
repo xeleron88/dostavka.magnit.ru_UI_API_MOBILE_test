@@ -1,14 +1,11 @@
 package ru.magnit.dostavka.tests.api.pages;
 
-import config.Project;
 import ru.magnit.dostavka.tests.api.specs.BasketSpecs;
 import ru.magnit.dostavka.tests.api.specs.CleanBasketSpecs;
 
 import static io.restassured.RestAssured.*;
-import static ru.magnit.dostavka.tests.api.specs.BasketSpecs.request;
-import static ru.magnit.dostavka.tests.api.specs.BasketSpecs.response;
 
-public class BasketPage {
+public class BasketApi {
 
     public void cleanBasket() {
         given()

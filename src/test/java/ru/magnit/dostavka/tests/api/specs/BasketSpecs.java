@@ -21,9 +21,6 @@ public class BasketSpecs {
             .multiPart("id", Project.config.productId())
             .multiPart("shopId", Project.config.shopId());
 
-
-
-
     public static ResponseSpecification response = new ResponseSpecBuilder()
             .log(LogDetail.ALL)
             .build();
